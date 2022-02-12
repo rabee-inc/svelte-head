@@ -1,6 +1,7 @@
 {
-  "name": "sveltekit-template",
+  "name": "svelte-head",
   "version": "0.0.1",
+  "main": "index.js",
   "scripts": {
     "setup": "yarn",
     "clean": "rm -rf node_modules yarn.lock .svelte-kit build",
@@ -27,20 +28,15 @@
     "less": "^4.1.2",
     "pug": "^3.0.2",
     "svelte": "^3.44.0",
-    "svelte-preprocess": "^4.10.1"
+    "svelte-preprocess": "^4.10.1",
+    "svelte2tsx": "^0.5.3",
+    "typescript": "^4.5.5"
   },
   "type": "module",
   "dependencies": {
     "@fontsource/noto-sans-jp": "^4.5.2",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
-    "dayjs": "^1.10.7",
-    "extend-deep": "^0.1.6",
-    "firerest": "https://github.com/phi-jp/firerest.git#c3b2c569d6418d8bf68ea56d1130f0eff58762f5",
-    "jquery": "^3.6.0",
-    "marked": "^4.0.10",
-    "meltline": "^0.1.13",
-    "sitemap": "4.1.1",
     "underscore": "^1.13.2"
   }
 }
