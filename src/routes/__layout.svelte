@@ -7,10 +7,25 @@
 
   setOptions({
     title(title) {
-      return title || 'Svelte Head Demo';
+      return title ? `${title} | Svelte Head Demo` : 'Svelte Head Demo';
+    },
+    description(description) {
+      return description || `svelte-head is a component library that allows you to easily set meta information etc. to be output to head.`;
+    },
+    keywords(keywords) {
+      return keywords || `svelte,sveltekit,seo,head,meta`;
+    },
+    ogp(ogp) {
+      return {
+        type: 'website',
+      };
+    },
+    twitter(twitter) {
+      return {
+        card: 'summary_large_image',
+      };
     },
   });
-
 </script>
 
 <template lang="pug">

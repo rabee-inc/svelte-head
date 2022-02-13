@@ -16,7 +16,7 @@
   export let posts = [];
 </script>
 
-<Meta />
+<Meta title='Example Title' />
 
 <template lang='pug'>
   main.container-640.px16.py32
