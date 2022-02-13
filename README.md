@@ -1,38 +1,58 @@
-# create-svelte
+# svelte-head
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+svelte-head is a component library that allows you to easily set meta information etc. to be output to head.
 
-## Creating a project
+Demo: https://svelte-head.onrender.com
 
-If you're seeing this, you've probably already done this step. Congrats!
-
+## Install
 ```bash
-# create a new project in the current directory
-npm init svelte@next
+npm install svelte-head --save
+```
+## Usage
 
-# create a new project in my-app
-npm init svelte@next my-app
+```html
+<script>
+  import {setOptions, Meta} from 'svelte-head';
+
+  // setup default value
+  setOptions({
+    title(title) {
+      return title ? `${title} | Svelte Head Demo` : 'Svelte Head Demo';
+    },
+    description(description) {
+      return description || `svelte-head is a component library that allows you to easily set meta information etc. to be output to head.`;
+    },
+    keywords(keywords) {
+      return keywords || `svelte,sveltekit,seo,head,meta`;
+    },
+    ogp(ogp) {
+      return {
+        type: 'website',
+      };
+    },
+    twitter(twitter) {
+      return {
+        card: 'summary_large_image',
+      };
+    },
+  });
+</script>
+
+<Meta title='Example Title' />
 ```
 
-> Note: the `@next` is temporary
+result
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```html
+<title>Example Title | Svelte Head Demo</title>
+<meta name="description" content="svelte-head is a component library that allows you to easily set meta information etc. to be output to head.">
+<meta name="”keywords”" content="svelte,sveltekit,seo,head,meta">
+<meta property="og:title" content="Example Title | Svelte Head Demo">
+<meta property="og:description" content="svelte-head is a component library that allows you to easily set meta information etc. to be output to head.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 ```
 
-## Building
+## License
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+MIT
