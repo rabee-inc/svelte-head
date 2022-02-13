@@ -46,9 +46,5 @@
   },
   "type": "module",
   "dependencies": {
-    "@fontsource/noto-sans-jp": "^4.5.2",
-    "@lukeed/uuid": "^2.0.0",
-    "cookie": "^0.4.1",
-    "underscore": "^1.13.2"
   }
 }
