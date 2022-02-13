@@ -1,8 +1,15 @@
 {
   "name": "svelte-head",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "description": "svelte-head is a component library that allows you to easily set meta information etc. to be output to head.",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "seo",
+    "head",
+    "meta"
+  ],
   "license": "MIT",
   "scripts": {
     "setup": "yarn",
