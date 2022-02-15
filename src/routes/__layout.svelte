@@ -3,7 +3,7 @@
   import '/static/icons/icons.css';
 
   // setup default options in head
-  import {setOptions, GoogleTagManager} from '$lib/index';
+  import {setOptions, GoogleTagManager, GoogleAdSense} from '$lib/index';
 
   setOptions({
     title(title) {
@@ -29,6 +29,7 @@
 </script>
 
 <GoogleTagManager id='GTM_ID' />
+<GoogleAdSense id='ca-pub-1234567890123456' />
 
 <template lang="pug">
   div.f.fclm.w-full.min-h-full
