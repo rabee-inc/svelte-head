@@ -1,6 +1,6 @@
 {
   "name": "svelte-head",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "description": "svelte-head is a component library that allows you to easily set meta information etc. to be output to head.",
   "keywords": [
