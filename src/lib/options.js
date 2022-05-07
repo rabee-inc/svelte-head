@@ -14,6 +14,12 @@ export let options = {
   twitter(twitter) {
     return twitter;
   },
+  noindex(noindex) {
+    return noindex;
+  },
+  nofollow(nofollow) {
+    return nofollow;
+  },
 };
 
 export let setOptions = function(opts) {

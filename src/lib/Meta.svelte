@@ -14,6 +14,8 @@
   $: _keywords = options.keywords(keywords);
   $: _ogp = options.ogp(ogp);
   $: _twitter = options.twitter(twitter);
+  $: _noindex = options.noindex(noindex);
+  $: _nofollow = options.nofollow(nofollow);
 </script>
 
 <svelte:head>
@@ -22,10 +24,10 @@
   <meta name="description" content="{_description}" />
   <meta name=”keywords” content={_keywords} />
 
-  {#if noindex}
+  {#if _noindex}
     <meta name=”robots” content=”noindex”>
   {/if}
-  {#if nofollow}
+  {#if _nofollow}
     <meta name=”robots” content=”nofollow”>
   {/if}
 

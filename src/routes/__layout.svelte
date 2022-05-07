@@ -25,6 +25,12 @@
         card: 'summary_large_image',
       };
     },
+    noindex(noindex) {
+      return noindex;
+    },
+    nofollow(nofollow) {
+      return nofollow;
+    },
   });
 </script>
 
