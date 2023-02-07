@@ -51,7 +51,7 @@ result
 ```html
 <title>Example Title | Svelte Head Demo</title>
 <meta name="description" content="svelte-head is a component library that allows you to easily set meta information etc. to be output to head.">
-<meta name="”keywords”" content="svelte,sveltekit,seo,head,meta">
+<meta name="keywords" content="svelte,sveltekit,seo,head,meta">
 <meta property="og:title" content="Example Title | Svelte Head Demo">
 <meta property="og:description" content="svelte-head is a component library that allows you to easily set meta information etc. to be output to head.">
 <meta property="og:type" content="website">
