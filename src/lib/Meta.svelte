@@ -22,13 +22,13 @@
   <!-- SEO -->
   <title>{_title}</title>
   <meta name="description" content="{_description}" />
-  <meta name=”keywords” content={_keywords} />
+  <meta name="keywords" content={_keywords} />
 
   {#if _noindex}
-    <meta name=”robots” content=”noindex”>
+    <meta name="robots" content="noindex">
   {/if}
   {#if _nofollow}
-    <meta name=”robots” content=”nofollow”>
+    <meta name="robots" content="nofollow">
   {/if}
 
   <!-- OGP -->
