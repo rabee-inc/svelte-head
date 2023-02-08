@@ -1,5 +1,7 @@
 # svelte-head
 
+[![npm version](https://badge.fury.io/js/svelte-head.svg)](https://badge.fury.io/js/svelte-head)
+
 svelte-head is a component library that allows you to easily set meta information etc. to be output to head.
 
 ## Demo
