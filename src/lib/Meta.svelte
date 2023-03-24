@@ -27,7 +27,7 @@
   <meta name="description" content="{_description}" />
   <meta name="keywords" content={_keywords} />
   {#if _canonical}
-  <link rel="canonical" href="{_canonical}">
+    <link rel="canonical" href="{_canonical}">
   {/if}
   {#if _noindex}
     <meta name="robots" content="noindex">
