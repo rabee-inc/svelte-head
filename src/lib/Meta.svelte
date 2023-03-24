@@ -8,6 +8,7 @@
   export let nofollow = false;
   export let ogp = {};
   export let twitter = {};
+  export let canonical = '';
 
   $: _title = options.title(title);
   $: _description = options.description(description);
@@ -16,6 +17,8 @@
   $: _twitter = options.twitter(twitter);
   $: _noindex = options.noindex(noindex);
   $: _nofollow = options.nofollow(nofollow);
+  $: _canonical = options.canonical(canonical);
+  
 </script>
 
 <svelte:head>
@@ -23,7 +26,9 @@
   <title>{_title}</title>
   <meta name="description" content="{_description}" />
   <meta name="keywords" content={_keywords} />
-
+  {#if _canonical}
+  <link rel="canonical" href="{_canonical}">
+  {/if}
   {#if _noindex}
     <meta name="robots" content="noindex">
   {/if}
