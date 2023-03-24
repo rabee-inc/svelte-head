@@ -31,6 +31,9 @@
     nofollow(nofollow) {
       return nofollow;
     },
+    canonical(canonical) {
+      return canonical;
+    },
   });
 </script>
 
