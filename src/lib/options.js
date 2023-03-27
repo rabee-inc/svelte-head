@@ -20,6 +20,9 @@ export let options = {
   nofollow(nofollow) {
     return nofollow;
   },
+  canonical(canonical) {
+    return canonical;
+  }
 };
 
 export let setOptions = function(opts) {
