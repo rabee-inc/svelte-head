@@ -15,7 +15,7 @@
   import Post from '$components/items/Post.svelte';
   export let posts = [];
 
-  let title = 'Example\nTitleaaaaaa';
+  let title = 'Example\nTitle';
   let description = 'Example\nDescription\ntest';
 </script>
 
