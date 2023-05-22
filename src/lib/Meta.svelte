@@ -11,13 +11,13 @@
   export let canonical = '';
 
   // 改行コードを半角スペースに変換
-  let replaceNewlinesWithSpace = (str) => {
+  let sanitize = (str) => {
     return str.replace(/\n/g, " ");
   };
 
-  $: _title = options.title(replaceNewlinesWithSpace(title));
-  $: _description = options.description(replaceNewlinesWithSpace(description));
-  $: _keywords = options.keywords(replaceNewlinesWithSpace(keywords));
+  $: _title = sanitize(options.title(title));
+  $: _description = sanitize(options.description(description));
+  $: _keywords = sanitize(options.keywords(keywords));
   $: _ogp = options.ogp(ogp);
   $: _twitter = options.twitter(twitter);
   $: _noindex = options.noindex(noindex);
