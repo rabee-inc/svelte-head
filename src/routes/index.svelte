@@ -14,9 +14,12 @@
   import {Meta} from '$lib/index';
   import Post from '$components/items/Post.svelte';
   export let posts = [];
+
+  let title = 'Example\nTitleaaaaaa';
+  let description = 'Example\nDescription\ntest';
 </script>
 
-<Meta title='Example Title' />
+<Meta title='{title}', description='{description}' />
 
 <template lang='pug'>
   main.container-640.px16.py32
