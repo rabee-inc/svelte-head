@@ -1,7 +1,8 @@
 <script>
+  import { page } from '$app/stores';
   import Post from '$components/items/Post.svelte';
   import Meta from '../lib/Meta.svelte';
-  export let posts = [];
+  let { posts } = $page.data;
 
   let title = 'Example\nTitle';
   let description = 'Example\nDescription\ntest';
