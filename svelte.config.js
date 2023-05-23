@@ -12,7 +12,7 @@ const config = {
     adapter: adapter(),
 
     alias: {
-      'svelte-modal-manager': path.resolve('./src/lib'),
+      'svelte-head': path.resolve('./src/lib'),
       $components: path.resolve('./src/components'),
     },
   },
