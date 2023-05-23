@@ -1,6 +1,5 @@
 <script>
   import '../app.css';
-  import '/static/icons/icons.css';
 
   // setup default options in head
   import {setOptions, GoogleTagManager, GoogleAdSense} from '$lib/index';
