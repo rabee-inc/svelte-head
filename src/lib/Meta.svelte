@@ -10,9 +10,14 @@
   export let twitter = {};
   export let canonical = '';
 
-  $: _title = options.title(title);
-  $: _description = options.description(description);
-  $: _keywords = options.keywords(keywords);
+  // 改行コードを半角スペースに変換
+  let sanitize = (str) => {
+    return str.replace(/\r?\n/g, ' ');
+  };
+
+  $: _title = sanitize(options.title(title));
+  $: _description = sanitize(options.description(description));
+  $: _keywords = sanitize(options.keywords(keywords));
   $: _ogp = options.ogp(ogp);
   $: _twitter = options.twitter(twitter);
   $: _noindex = options.noindex(noindex);
