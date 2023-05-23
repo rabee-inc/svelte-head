@@ -1,7 +1,8 @@
 <script>
   import { page } from '$app/stores';
   import Post from '$components/items/Post.svelte';
-  import Meta from '../lib/Meta.svelte';
+  import { Meta } from '$lib/index';
+
   let { posts } = $page.data;
 
   let title = 'Example\nTitle';
