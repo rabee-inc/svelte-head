@@ -1,25 +1,13 @@
-<script context="module">
-  export async function load({fetch}) {
-    let res = await fetch('https://jsonplaceholder.typicode.com/posts');
-    let json = await res.json();
-
-    return {
-      props: {
-        posts: json,
-      }
-    };
-  }
-</script>
 <script>
-  import {Meta} from '$lib/index';
   import Post from '$components/items/Post.svelte';
+  import Meta from '../lib/Meta.svelte';
   export let posts = [];
 
   let title = 'Example\nTitle';
   let description = 'Example\nDescription\ntest';
 </script>
 
-<Meta title='{title}', description='{description}' />
+<Meta title='{title}' description='{description}' />
 
 <template lang='pug'>
   main.container-640.px16.py32
