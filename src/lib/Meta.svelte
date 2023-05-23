@@ -12,7 +12,12 @@
 
   // 改行コードを半角スペースに変換
   let sanitize = (str) => {
-    return str.replace(/\n/g, " ");
+    // Windows 考慮
+    const normalizedText = str.replace(/\r\n/g, '\n');
+    // 改行コードを半角スペースに置換
+    const replacedText = normalizedText.replace(/\n/g, ' ');
+    
+    return replacedText;
   };
 
   $: _title = sanitize(options.title(title));
