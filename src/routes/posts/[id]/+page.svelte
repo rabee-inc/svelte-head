@@ -11,6 +11,6 @@
     h1.mb32 {post.id}. {post.title}
     p.mb32 {post.body}
 
-    a(sveltekit:prefetch, href='/') top
+    a(href='/') top
 
 </template>
