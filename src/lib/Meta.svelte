@@ -1,28 +1,43 @@
 <script>
   import {options} from './options';
 
-  export let title = '';
-  export let description = '';
-  export let keywords = '';
-  export let noindex = false;
-  export let nofollow = false;
-  export let ogp = {};
-  export let twitter = {};
-  export let canonical = '';
+  /**
+   * @typedef {Object} Props
+   * @property {string} [title]
+   * @property {string} [description]
+   * @property {string} [keywords]
+   * @property {boolean} [noindex]
+   * @property {boolean} [nofollow]
+   * @property {any} [ogp]
+   * @property {any} [twitter]
+   * @property {string} [canonical]
+   */
+
+  /** @type {Props} */
+  let {
+    title = '',
+    description = '',
+    keywords = '',
+    noindex = false,
+    nofollow = false,
+    ogp = {},
+    twitter = {},
+    canonical = ''
+  } = $props();
 
   // 改行コードを半角スペースに変換
   let sanitize = (str) => {
     return str.replace(/\r?\n/g, ' ');
   };
 
-  $: _title = sanitize(options.title(title));
-  $: _description = sanitize(options.description(description));
-  $: _keywords = sanitize(options.keywords(keywords));
-  $: _ogp = options.ogp(ogp);
-  $: _twitter = options.twitter(twitter);
-  $: _noindex = options.noindex(noindex);
-  $: _nofollow = options.nofollow(nofollow);
-  $: _canonical = options.canonical(canonical);
+  let _title = $derived(sanitize(options.title(title)));
+  let _description = $derived(sanitize(options.description(description)));
+  let _keywords = $derived(sanitize(options.keywords(keywords)));
+  let _ogp = $derived(options.ogp(ogp));
+  let _twitter = $derived(options.twitter(twitter));
+  let _noindex = $derived(options.noindex(noindex));
+  let _nofollow = $derived(options.nofollow(nofollow));
+  let _canonical = $derived(options.canonical(canonical));
   
 </script>
 

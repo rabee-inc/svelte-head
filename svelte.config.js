@@ -8,6 +8,10 @@ const preprocess = sveltePreprocess({
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+  compilerOptions: {
+    // runes を強制する
+    runes: true,
+  },
   kit: {
     adapter: adapter(),
 
