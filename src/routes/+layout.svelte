@@ -2,14 +2,19 @@
   import '../app.css';
 
   // setup default options in head
-  import {setOptions, GoogleTagManager, GoogleAdSense} from '$lib/index';
+  import { setOptions, GoogleTagManager, GoogleAdSense } from '$lib/index';
+
+  let { children } = $props();
 
   setOptions({
     title(title) {
       return title ? `${title} | Svelte Head Demo` : 'Svelte Head Demo';
     },
     description(description) {
-      return description || `svelte-head is a component library that allows you to easily set meta information etc. to be output to head.`;
+      return (
+        description ||
+        `svelte-head is a component library that allows you to easily set meta information etc. to be output to head.`
+      );
     },
     keywords(keywords) {
       return keywords || `svelte,sveltekit,seo,head,meta`;
@@ -36,11 +41,11 @@
   });
 </script>
 
-<GoogleTagManager id='GTM_ID' />
-<GoogleAdSense id='ca-pub-1234567890123456' />
+<GoogleTagManager id="GTM_ID" />
+<GoogleAdSense id="ca-pub-1234567890123456" />
 
-<template lang="pug">
-  div.f.fclm.w-full.min-h-full
-    div.s-full
-      slot
-</template>
+<div class="f fclm w-full min-h-full">
+  <div class="s-full">
+    {@render children()}
+  </div>
+</div>

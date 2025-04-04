@@ -1,9 +1,8 @@
 <script>
-  export let post;
+  let { post } = $props();
 </script>
 
-<template lang='pug'>
-  a.block(href='/posts/{post.id}')
-    h2 {post.title}
-    p.line-clamp-3 {post.body}
-</template>
+<a class="block" href="/posts/{post.id}">
+  <h2>{post.title}</h2>
+  <p class="line-clamp-3">{post.body}</p>
+</a>
